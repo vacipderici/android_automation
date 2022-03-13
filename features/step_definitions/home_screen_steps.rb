@@ -22,5 +22,10 @@ When('I press on Clear button') do
   puts("Clear button  is pressed")
 end
 
+When(/^I type "([^"]*)" to target text field$/) do |target|
+  puts("target is #{target}")
+end
 
-
+Then(/^I should see result as "([^"]*)"$/) do |result|
+  puts("result is #{result}")
+end
