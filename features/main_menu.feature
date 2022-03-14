@@ -1,13 +1,13 @@
 Feature: As a user I want ro convert Units
 
-  @wip
+
   Scenario: When I tap on menu icon, I should see left side menu
     Given I land on Home screen
     When I press on Menu icon
     Then I should see left side menu
 
 
-  @conversions
+  @wip
   Scenario: I should be able to open My conversions screen
     Given I land on Home screen
     When I press on Menu icon

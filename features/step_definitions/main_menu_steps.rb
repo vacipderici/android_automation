@@ -8,15 +8,16 @@ When(/^I press on Menu icon$/) do
 end
 
 Then(/^I should see left side menu$/) do
-  find_element(xpath: "//*[contains(@text, 'My conversions')]").click
+  find_element(xpath: "//*[contains(@text, 'Unit Converter')]")
 end
 
 When(/^I press on My conversions button$/) do
-  puts("My conversions button pressed")
+  find_element(xpath: "//*[contains(@text, 'My conversions')]").click
 end
 
 Then(/^I land on My conversions screen$/) do
-  puts("Landed on My conversions screen")
+
+  find_element(xpath: "//*[contains(@text, 'No personal conversion created yet')]").click
 end
 
 
