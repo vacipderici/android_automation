@@ -26,3 +26,15 @@ end
 Then(/^I should see result as "([^"]*)"$/) do |result|
   puts("result is #{result}")
 end
+
+Then(/^I press on Add to Favorites icon$/) do
+  find_element(id:"action_add_favorites").click
+end
+
+Then(/^I press on Favorite conversions$/) do
+  find_element(xpath: "//*[contains(@text, 'Favorite conversions')]").click
+end
+
+And(/^I verify "([^"]*)" added to Favorite conversions list$/) do |unit_type|
+  find_element(xpath: "//*[contains(@text, #{unit_type})]").click
+end
