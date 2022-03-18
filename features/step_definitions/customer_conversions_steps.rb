@@ -3,7 +3,7 @@ Then(/^I press on Create your first conversion button$/) do
 end
 
 Then(/^I type "([^"]*)" as custom conversion name$/) do |name|
-  sleep(3000)
+
   find_element(id: "edit_custom_conversion_category_name").send_keys(name)
 
 end

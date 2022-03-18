@@ -38,3 +38,19 @@ end
 And(/^I verify "([^"]*)" added to Favorite conversions list$/) do |unit_type|
   find_element(xpath: "//*[contains(@text, #{unit_type})]").click
 end
+
+Then(/^I press on search icon$/) do
+  find_element(id:"action_search").click
+end
+
+Then(/^I type "([^"]*)" in search field$/) do |arg|
+  find_element(id:"search_src_text").send_keys(arg)
+end
+
+And(/^I press return button on soft keyboard$/) do
+  Appium::TouchAction.new.tap(x:1010.0, y:2095.0, count: 1).perform
+end
+
+Then(/^I see "([^"]*)" as a current unit converter$/) do |current_unit|
+  find_element(xpath: "//*[contains(@text, #{current_unit})]")
+end

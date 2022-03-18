@@ -25,10 +25,19 @@ Feature: Tests for Home screen functionality
       |3     |36    |
       |9     |106   |
 
+  Scenario: User able to add current conversion to Favorites list
+    Given I land on Home screen
+    Then I press on Add to Favorites icon
+    When I press on Menu icon
+    Then I press on Favorite conversions
+    And I verify "Length" added to Favorite conversions list
 
-    Scenario: User able to add current conversion to Favorites List
-      Given I land on Home screen
-      Then I press on Add to Favorites icon
-      When I press on Menu icon
-      Then I press on Favorite conversions
-      Then I verify "Length" added to Favorite conversions list
+  Scenario: User able to search by existing Conversion type
+    Given I land on Home screen
+    Then I press on search icon
+    Then I type "Temperature" in search field
+    And I press return button on soft keyboard
+    Then I see "Temperature" as a current unit converter
+    Then Left Unit picker value should be "Celicius"
+    And Right unit picker value should be "Fahrenheit"
+
