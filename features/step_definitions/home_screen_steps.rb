@@ -48,8 +48,7 @@ Then(/^I type "([^"]*)" in search field$/) do |arg|
 end
 
 And(/^I press return button on soft keyboard$/) do
-  Appium.TouchAction a2 = new TouchAction();
-  a2.Tap (100, 100).Perform();
+  Appium::TouchAction.new.tap(x:0.99, y:0.99, count: 1).perform
 end
 
 Then(/^I see "([^"]*)" as a current unit converter$/) do |current_unit|
