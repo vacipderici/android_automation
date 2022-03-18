@@ -3,11 +3,13 @@ Then(/^I press on Create your first conversion button$/) do
 end
 
 Then(/^I type "([^"]*)" as custom conversion name$/) do |name|
+  sleep(3000)
   find_element(id: "edit_custom_conversion_category_name").send_keys(name)
+
 end
 
 When(/^I press on New unit button$/) do
-  sleep 3
+  sleep(3)
   find_element(id: "btn_new_custom_unit").click
 end
 
